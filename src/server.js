@@ -9,7 +9,7 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(expressLayouts); // third party middleware
 app.use(express.static('public')); // built-in middleware
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
   const mahasiswa = [
